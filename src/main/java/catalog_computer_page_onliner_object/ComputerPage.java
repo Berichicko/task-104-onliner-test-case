@@ -1,10 +1,10 @@
 package catalog_computer_page_onliner_object;
 
-import catalog_page_onliner_object.CatalogOnlinerPage;
+import catalog_page_onliner_object.CatalogPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class ComputerCatalogOnlinerPage extends CatalogOnlinerPage {
+public class ComputerPage extends CatalogPage {
 
     private final By clickComputerLocator = By.xpath("//span[contains(text(), 'Компьютеры и')][@class]");
     private final By pcLocator = By.xpath("//div[contains(text(), ' Ноутбуки, компьютеры, мониторы ')]");
@@ -12,7 +12,7 @@ public class ComputerCatalogOnlinerPage extends CatalogOnlinerPage {
     private final By dataLocator = By.xpath("//div[contains(text(), ' Хранение данных ')]");
     private final By networkLocator = By.xpath("//div[contains(text(), ' Сетевое оборудование ')]");
 
-    public ComputerCatalogOnlinerPage(WebDriver driver) {
+    public ComputerPage(WebDriver driver) {
         super(driver);
     }
 
@@ -22,22 +22,22 @@ public class ComputerCatalogOnlinerPage extends CatalogOnlinerPage {
     }
 
     public boolean verifyPC() {
-        return driver.findElement(pcLocator)
-                .getText().equals("Ноутбуки, компьютеры, мониторы");
+        return driver.findElement(pcLocator).isDisplayed();
+
     }
 
     public boolean verifyAccessories() {
-        return driver.findElement(accessoriesLocator)
-                .getText().equals("Комплектующие");
+        return driver.findElement(accessoriesLocator).isDisplayed();
+
     }
 
     public boolean verifyData() {
-        return driver.findElement(dataLocator)
-                .getText().equals("Хранение данных");
+        return driver.findElement(dataLocator).isDisplayed();
+
     }
 
     public boolean verifyNetwork() {
-        return driver.findElement(networkLocator)
-                .getText().equals("Сетевое оборудование");
+        return driver.findElement(networkLocator).isDisplayed();
+
     }
 }

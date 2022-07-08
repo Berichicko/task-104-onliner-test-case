@@ -1,19 +1,17 @@
-import catalog_computer_page_onliner_object.ComputerCatalogOnlinerPage;
-import computer_components_page_onliner_object.ComponentComputerCatalogOnlinerPage;
+import catalog_computer_page_onliner_object.ComputerPage;
+import computer_components_page_onliner_object.ComponentPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import catalog_page_onliner_object.CatalogOnlinerPage;
+import catalog_page_onliner_object.CatalogPage;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
-
 public class BaseTest {
     private final static String URL_CONNECTION = "https://catalog.onliner.by/";
-    CatalogOnlinerPage catalogPage;
-    ComputerCatalogOnlinerPage computerPage;
-    ComponentComputerCatalogOnlinerPage accessoriesPage;
+    CatalogPage catalogPage;
+    ComputerPage computerPage;
+    ComponentPage componentPage;
     private WebDriver driver;
 
     @Before
@@ -22,9 +20,9 @@ public class BaseTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(URL_CONNECTION);
-        catalogPage = new CatalogOnlinerPage(driver);
-        computerPage = new ComputerCatalogOnlinerPage(driver);
-        accessoriesPage = new ComponentComputerCatalogOnlinerPage(driver);
+        catalogPage = new CatalogPage(driver);
+        computerPage = new ComputerPage(driver);
+        componentPage = new ComponentPage(driver);
     }
 
     @After
@@ -37,5 +35,3 @@ public class BaseTest {
         driver.quit();
     }
 }
-
-

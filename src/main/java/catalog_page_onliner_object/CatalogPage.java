@@ -3,7 +3,7 @@ package catalog_page_onliner_object;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class CatalogOnlinerPage {
+public class CatalogPage {
 
     protected WebDriver driver;
     private final By ElectronicsLocator = By.xpath("//span[contains(text(), 'Электроника')]");
@@ -15,48 +15,40 @@ public class CatalogOnlinerPage {
     private final By ChildrenLocator = By.xpath("//span[contains(text(), 'Детям и')]");
     private final By WorkLocator = By.xpath("//span[contains(text(), 'Работа и')]");
 
-    public CatalogOnlinerPage(WebDriver driver) {
+    public CatalogPage(WebDriver driver) {
         this.driver = driver;
     }
 
     public boolean verifyElectron() {
-        return driver.findElement(ElectronicsLocator).getText().equals("Электроника");
-
+    return driver.findElement(ElectronicsLocator).isDisplayed();
     }
 
     public boolean verifyComputer() {
-        return driver.findElement(ComputerLocator).getText().equals("Компьютеры и сети");
-
-
+    return driver.findElement(ComputerLocator).isDisplayed();
     }
 
     public boolean verifyHomeAppliances() {
-        return driver.findElement(HomeAppliancesLocator).getText().equals("Бытовая техника");
+    return driver.findElement(HomeAppliancesLocator).isDisplayed();
 
     }
 
     public boolean verifyBuilding() {
-        return driver.findElement(BuildingLocator).getText().equals("Стройка и ремонт");
-
+    return driver.findElement(BuildingLocator).isDisplayed();
     }
 
     public boolean verifyHome() {
-        return driver.findElement(HomeLocator).getText().equals("Дом и сад");
-
+    return driver.findElement(HomeLocator).isDisplayed();
     }
 
     public boolean verifySport() {
-        return driver.findElement(SportLocator).getText().equals("Красота и спорт");
-
+    return driver.findElement(SportLocator).isDisplayed();
     }
 
     public boolean verifyChildren() {
-        return driver.findElement(ChildrenLocator).getText().equals("Детям и мамам");
-
+    return driver.findElement(ChildrenLocator).isDisplayed();
     }
 
     public boolean verifyWork() {
-        return driver.findElement(WorkLocator).getText().equals("Работа и офис");
-
+    return driver.findElement(WorkLocator).isDisplayed();
     }
 }

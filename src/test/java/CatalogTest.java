@@ -1,47 +1,45 @@
-
-
 import org.junit.Assert;
 import org.junit.Test;
 
 public class CatalogTest extends BaseTest {
 
     @Test
-    public void testElectron() {
+    public void testCatalogElectrons() {
         Assert.assertTrue(catalogPage.verifyElectron());
     }
 
     @Test
-    public void testComputer() {
+    public void testCatalogComputer() {
         Assert.assertTrue(catalogPage.verifyComputer());
     }
 
     @Test
-    public void testHomeAppliances() {
+    public void testCatalogHomeAppliances() {
         Assert.assertTrue(catalogPage.verifyHomeAppliances());
     }
 
     @Test
-    public void testBuild() {
+    public void testCatalogBuild() {
         Assert.assertTrue(catalogPage.verifyBuilding());
     }
 
     @Test
-    public void testHome() {
+    public void testCatalogHome() {
         Assert.assertTrue(catalogPage.verifyHome());
     }
 
     @Test
-    public void testSport() {
+    public void testCatalogSport() {
         Assert.assertTrue(catalogPage.verifySport());
     }
 
     @Test
-    public void testChildren() {
+    public void testCatalogChildren() {
         Assert.assertTrue(catalogPage.verifyChildren());
     }
 
     @Test
-    public void testWork() {
+    public void testCatalogWork() {
         Assert.assertTrue(catalogPage.verifyWork());
     }
 }
