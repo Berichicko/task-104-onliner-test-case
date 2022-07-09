@@ -22,7 +22,7 @@ public class ComputerPage extends CatalogPage {
     }
 
     public boolean verifyPC() {
-        return driver.findElement(pcLocator).isDisplayed();
+    return driver.findElement(pcLocator).isDisplayed();
     }
 
     public boolean verifyAccessories() {

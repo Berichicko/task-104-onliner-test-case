@@ -5,10 +5,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class ComponentPage extends ComputerPage {
-    private final By clickComponentLocator = By.xpath("//div[contains(@class, 'catalog-navigation-list__aside-title') and text() = ' Комплектующие ']");
-    private final By videoCardLocator = By.xpath("//div[contains(@class, 'catalog-navigation-list__aside-title') and text() = ' Комплектующие ']//..//span[@class='catalog-navigation-list__dropdown-title']");
-    private final By amountVideoCardLocator = By.xpath("//div[contains(@class, 'catalog-navigation-list__aside-title') and text() = ' Комплектующие ']//..//span[@class='catalog-navigation-list__dropdown-description']");
-    private final By minPriceVideoCardLocator = By.xpath("//div[contains(@class, 'catalog-navigation-list__aside-title') and text() = ' Комплектующие ']//..//span[@class='catalog-navigation-list__dropdown-description']");
+    private final By clickComponentLocator = By.xpath("//div[contains(@class, 'catalog-navigation-list__aside-title') " +
+            "and text() = ' Комплектующие ']");
+    private final By NameComponentsLocator = By.xpath("//div[contains(@class, 'catalog-navigation-list__aside-title') " +
+            "and text() = ' Комплектующие ']" +
+            "//..//span[@class='catalog-navigation-list__dropdown-title']");
+    private final By amountComponentsLocator = By.xpath("//div[contains(@class, 'catalog-navigation-list__aside-title') and text() = ' Комплектующие ']" +
+            "//..//span[@class='catalog-navigation-list__dropdown-description']");
+    private final By minPriceComponentsLocator = By.xpath("//div[contains(@class, 'catalog-navigation-list__aside-title') and text() = ' Комплектующие ']" +
+            "//..//span[@class='catalog-navigation-list__dropdown-description']");
 
     public ComponentPage(WebDriver driver) {
         super(driver);
@@ -20,16 +25,14 @@ public class ComponentPage extends ComputerPage {
     }
 
     public boolean verifyNameComponents() {
-        return driver.findElement(videoCardLocator).isDisplayed();
+        return driver.findElement(NameComponentsLocator).isDisplayed();
     }
 
     public boolean verifyAmountComponents() {
-        return driver.findElement(amountVideoCardLocator).isDisplayed();
-
+        return driver.findElement(amountComponentsLocator).isDisplayed();
     }
 
     public boolean verifyMinPriceComponents() {
-
-        return driver.findElement(minPriceVideoCardLocator).isDisplayed();
+        return driver.findElement(minPriceComponentsLocator).isDisplayed();
     }
 }
