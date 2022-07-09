@@ -29,7 +29,6 @@ public class CatalogPage {
 
     public boolean verifyHomeAppliances() {
     return driver.findElement(HomeAppliancesLocator).isDisplayed();
-
     }
 
     public boolean verifyBuilding() {

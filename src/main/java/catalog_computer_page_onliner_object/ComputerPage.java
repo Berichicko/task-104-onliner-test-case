@@ -23,17 +23,14 @@ public class ComputerPage extends CatalogPage {
 
     public boolean verifyPC() {
         return driver.findElement(pcLocator).isDisplayed();
-
     }
 
     public boolean verifyAccessories() {
         return driver.findElement(accessoriesLocator).isDisplayed();
-
     }
 
     public boolean verifyData() {
         return driver.findElement(dataLocator).isDisplayed();
-
     }
 
     public boolean verifyNetwork() {

@@ -12,16 +12,16 @@ public class ComponentTest extends BaseTest {
 
     @Test
     public void testCatalogVideoCard() {
-    Assert.assertTrue(componentPage.verifyVideoCard());
+    Assert.assertTrue(componentPage.verifyNameComponents());
     }
 
     @Test
     public void testCatalogAmountVideoCard() {
-    Assert.assertTrue(componentPage.verifyAmountVideoCard());
+    Assert.assertTrue(componentPage.verifyAmountComponents());
     }
 
     @Test
     public void testCatalogMinPriceVideoCard() {
-    Assert.assertTrue(componentPage.verifyMinPriceVideoCard());
+    Assert.assertTrue(componentPage.verifyMinPriceComponents());
     }
 }

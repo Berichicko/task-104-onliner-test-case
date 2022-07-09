@@ -5,11 +5,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class ComponentPage extends ComputerPage {
-    private final By clickComponentLocator = By.xpath("//div[@class='catalog-navigation-list__aside-title']" +
-            "[contains(text(), 'Комплектующие')][1]");
-    private final By videoCardLocator = By.xpath("//span[contains(text(), 'Видеокарты')]");
-    private final By amountVideoCardLocator = By.xpath("/span[contains(text(), ' 1,141 товар ')]");
-    private final By minPriceVideoCardLocator = By.xpath("//span[contains(text(), ' от 106,95 р. ')");
+    private final By clickComponentLocator = By.xpath("//div[contains(@class, 'catalog-navigation-list__aside-title') and text() = ' Комплектующие ']");
+    private final By videoCardLocator = By.xpath("//div[contains(@class, 'catalog-navigation-list__aside-title') and text() = ' Комплектующие ']//..//span[@class='catalog-navigation-list__dropdown-title']");
+    private final By amountVideoCardLocator = By.xpath("//div[contains(@class, 'catalog-navigation-list__aside-title') and text() = ' Комплектующие ']//..//span[@class='catalog-navigation-list__dropdown-description']");
+    private final By minPriceVideoCardLocator = By.xpath("//div[contains(@class, 'catalog-navigation-list__aside-title') and text() = ' Комплектующие ']//..//span[@class='catalog-navigation-list__dropdown-description']");
 
     public ComponentPage(WebDriver driver) {
         super(driver);
@@ -20,17 +19,17 @@ public class ComponentPage extends ComputerPage {
                 .click();
     }
 
-    public boolean verifyVideoCard() {
+    public boolean verifyNameComponents() {
         return driver.findElement(videoCardLocator).isDisplayed();
-
     }
 
-    public boolean verifyAmountVideoCard() {
+    public boolean verifyAmountComponents() {
         return driver.findElement(amountVideoCardLocator).isDisplayed();
 
     }
 
-    public boolean verifyMinPriceVideoCard() {
+    public boolean verifyMinPriceComponents() {
+
         return driver.findElement(minPriceVideoCardLocator).isDisplayed();
     }
 }

@@ -11,25 +11,21 @@ public class ComputerTest extends BaseTest {
 
     @Test
     public void testCatalogPC() {
-
-        Assert.assertTrue(computerPage.verifyPC());
+    Assert.assertTrue(computerPage.verifyPC());
     }
 
     @Test
     public void testCatalogAccessories() {
-
-        Assert.assertTrue(computerPage.verifyAccessories());
+    Assert.assertTrue(computerPage.verifyAccessories());
     }
 
     @Test
     public void testCatalogData() {
-
-        Assert.assertTrue(computerPage.verifyData());
+    Assert.assertTrue(computerPage.verifyData());
     }
 
     @Test
     public void testCatalogNetwork() {
-
-        Assert.assertTrue(computerPage.verifyNetwork());
+    Assert.assertTrue(computerPage.verifyNetwork());
     }
 }
