@@ -1,45 +1,56 @@
+import catalog.page.onliner.object.CatalogPage;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class CatalogTest extends BaseTest {
+    private CatalogPage catalogPage;
+
 
     @Test
     public void testCatalogElectrons() {
-        Assert.assertTrue(catalogPage.verifyElectron());
+        catalogPage = new CatalogPage(driver);
+        Assert.assertTrue(catalogPage.isDisplayedSectionElectronic());
     }
 
     @Test
     public void testCatalogComputer() {
-        Assert.assertTrue(catalogPage.verifyComputer());
+        catalogPage = new CatalogPage(driver);
+        Assert.assertTrue(catalogPage.isDisplayedSectionComputer());
     }
 
     @Test
     public void testCatalogHomeAppliances() {
-        Assert.assertTrue(catalogPage.verifyHomeAppliances());
+        catalogPage = new CatalogPage(driver);
+        Assert.assertTrue(catalogPage.isDisplayedSectionHomeAppliances());
     }
 
     @Test
     public void testCatalogBuild() {
-        Assert.assertTrue(catalogPage.verifyBuilding());
+        catalogPage = new CatalogPage(driver);
+        Assert.assertTrue(catalogPage.isDisplayedSectionBuilding());
     }
 
     @Test
     public void testCatalogHome() {
-        Assert.assertTrue(catalogPage.verifyHome());
+        catalogPage = new CatalogPage(driver);
+        Assert.assertTrue(catalogPage.isDisplayedSectionHome());
     }
 
     @Test
     public void testCatalogSport() {
-        Assert.assertTrue(catalogPage.verifySport());
+        catalogPage = new CatalogPage(driver);
+        Assert.assertTrue(catalogPage.isDisplayedSectionSport());
     }
 
     @Test
     public void testCatalogChildren() {
-        Assert.assertTrue(catalogPage.verifyChildren());
+        catalogPage = new CatalogPage(driver);
+        Assert.assertTrue(catalogPage.isDisplayedSectionChildren());
     }
 
     @Test
     public void testCatalogWork() {
-        Assert.assertTrue(catalogPage.verifyWork());
+        catalogPage = new CatalogPage(driver);
+        Assert.assertTrue(catalogPage.isDisplayedSectionWork());
     }
 }

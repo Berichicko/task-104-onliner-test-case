@@ -1,31 +1,38 @@
+import catalog.computer.page.onliner.object.ComputerPage;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 public class ComputerTest extends BaseTest {
+    private ComputerPage computerPage;
 
     @Before
     public void clickComputer() {
-    computerPage.clickComputer();
+        computerPage = new ComputerPage(driver);
+        computerPage.clickCatalogComputer();
     }
 
     @Test
-    public void testCatalogPC() {
-    Assert.assertTrue(computerPage.verifyPC());
+    public void testSectionLaptop() {
+        computerPage = new ComputerPage(driver);
+        Assert.assertTrue(computerPage.isDisplayedSectionLaptop());
     }
 
     @Test
-    public void testCatalogAccessories() {
-    Assert.assertTrue(computerPage.verifyAccessories());
+    public void testSectionAccessories() {
+        computerPage = new ComputerPage(driver);
+        Assert.assertTrue(computerPage.isDisplayedSectionAccessories());
     }
 
     @Test
-    public void testCatalogData() {
-    Assert.assertTrue(computerPage.verifyData());
+    public void testSectionDataStorage() {
+        computerPage = new ComputerPage(driver);
+        Assert.assertTrue(computerPage.isDisplayedSectionDataStorage());
     }
 
     @Test
-    public void testCatalogNetwork() {
-    Assert.assertTrue(computerPage.verifyNetwork());
+    public void testSectionNetwork() {
+        computerPage = new ComputerPage(driver);
+        Assert.assertTrue(computerPage.isDisplayedSectionNetwork());
     }
 }
