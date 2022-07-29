@@ -35,7 +35,9 @@ public class ComponentPage extends ComputerPage {
     public boolean isDisplayedNameComponents() {
         List<WebElement> elementName = driver.findElements(SECTION_COMPUTER_NAME_COMPONENTS_LOCATOR);
         for (WebElement elements : elementName) {
-            elements.isDisplayed();
+            if (!elements.isDisplayed()){
+                System.out.println(elements);
+            }
         }
         return true;
     }
